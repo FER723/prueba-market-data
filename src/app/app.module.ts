@@ -15,7 +15,7 @@ function getToken$(appService: AppService): () => Observable<any> {
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

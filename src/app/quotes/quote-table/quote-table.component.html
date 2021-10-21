@@ -9,7 +9,7 @@
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Close</div>
       <div class="col col-2" data-label="CLOSE_ADJ_NORM Value">{{+quote.close_adj_norm.v | number}}</div>
-      <div class="col col-3" data-label="CLOSE_ADJ_NORM Date">{{quote.close_adj_norm.d | date :'shortDate'}}</div>
+      <div class="col col-3" data-label="CLOSE_ADJ_NORM Date">{{quote.close_adj_norm.d | date :'MM/dd/yyyy'}}</div>
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Day Change %</div>
@@ -36,7 +36,7 @@
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Previous year close</div>
       <div class="col col-2" data-label="PY_CLOSE Value">{{+quote.py_close.v | number}}</div>
-      <div class="col col-3" data-label="PY_CLOSE Date">{{quote.py_close.d | date :'shortDate'}}</div>
+      <div class="col col-3" data-label="PY_CLOSE Date">{{quote.py_close.d | date :'MM/dd/yyyy'}}</div>
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">YTD %</div>
