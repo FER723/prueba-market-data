@@ -4,7 +4,7 @@
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Last</div>
       <div class="col col-2" data-label="LVAL_NORM Value">{{+quote.lval_norm.v | number}}</div>
-      <div class="col col-3" data-label="LVAL_NORM Date">{{quote.lval_norm.d | date :'HH:mm:ss'}}</div>
+      <div class="col col-3" data-label="LVAL_NORM Date">{{quote.lval_norm.d | date :'HH:mm:ss':'GMT'}}</div>
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Close</div>
@@ -13,11 +13,13 @@
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Day Change %</div>
+      <!--- TODO: Meterlo en pipe o directiva --->
       <div [ngStyle]="{'color': getNumberColor(quote.nc2_pr_norm.v)}" class="col col-2" data-label="NC2_PR_NORM Value">{{+quote.nc2_pr_norm.v | number}} %</div>
       <div class="col col-3" data-label="NC2_PR_NORM Date"></div>
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">Day Change</div>
+      <!--- TODO: Meterlo en pipe o directiva --->
       <div [ngStyle]="{'color': getNumberColor(quote.nc2_norm.v)}" class="col col-2" data-label="NC2_NORM Value">{{+quote.nc2_norm.v | number}}</div>
       <div class="col col-3" data-label="NC2_NORM Date"></div>
     </li>
@@ -38,6 +40,7 @@
     </li>
     <li class="table-row">
       <div class="col col-1" data-label="Quote name">YTD %</div>
+      <!--- TODO: Meterlo en pipe o directiva --->
       <div [ngStyle]="{'color': getNumberColor(quote.ytd_pr_norm.v)}" class="col col-2" data-label="YTD_PR_NORM Value">{{+quote.ytd_pr_norm.v | number}} %</div>
       <div class="col col-3" data-label="YTD_PR_NORM Date"></div>
     </li>
