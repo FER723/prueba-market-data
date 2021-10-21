@@ -1,0 +1,45 @@
+<div class="container" *ngFor = "let quote of quotes" >
+  <h2>Market Data <small>Key Data</small></h2>
+  <ul class="responsive-table">
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Last</div>
+      <div class="col col-2" data-label="LVAL_NORM Value">{{+quote.lval_norm.v | number}}</div>
+      <div class="col col-3" data-label="LVAL_NORM Date">{{quote.lval_norm.d | date :'HH:mm:ss'}}</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Close</div>
+      <div class="col col-2" data-label="CLOSE_ADJ_NORM Value">{{+quote.close_adj_norm.v | number}}</div>
+      <div class="col col-3" data-label="CLOSE_ADJ_NORM Date">{{quote.close_adj_norm.d | date :'shortDate'}}</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Day Change %</div>
+      <div [ngStyle]="{'color': getNumberColor(quote.nc2_pr_norm.v)}" class="col col-2" data-label="NC2_PR_NORM Value">{{+quote.nc2_pr_norm.v | number}} %</div>
+      <div class="col col-3" data-label="NC2_PR_NORM Date"></div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Day Change</div>
+      <div [ngStyle]="{'color': getNumberColor(quote.nc2_norm.v)}" class="col col-2" data-label="NC2_NORM Value">{{+quote.nc2_norm.v | number}}</div>
+      <div class="col col-3" data-label="NC2_NORM Date"></div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Volume</div>
+      <div class="col col-2" data-label="VOL Value">{{+quote.vol.v | number}} M</div>
+      <div class="col col-3" data-label="VOL Date"></div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Turnover</div>
+      <div class="col col-2" data-label="TUR Value">{{+quote.tur.v | number}} M</div>
+      <div class="col col-3" data-label="TUR Date"></div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">Previous year close</div>
+      <div class="col col-2" data-label="PY_CLOSE Value">{{+quote.py_close.v | number}}</div>
+      <div class="col col-3" data-label="PY_CLOSE Date">{{quote.py_close.d | date :'shortDate'}}</div>
+    </li>
+    <li class="table-row">
+      <div class="col col-1" data-label="Quote name">YTD %</div>
+      <div [ngStyle]="{'color': getNumberColor(quote.ytd_pr_norm.v)}" class="col col-2" data-label="YTD_PR_NORM Value">{{+quote.ytd_pr_norm.v | number}} %</div>
+      <div class="col col-3" data-label="YTD_PR_NORM Date"></div>
+    </li>
+  </ul>
+</div>
